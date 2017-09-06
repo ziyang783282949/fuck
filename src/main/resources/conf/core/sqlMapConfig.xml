@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.spirit.porker.model.MessageModel" alias="MessageModel" />
+		<typeAlias type="com.spirit.porker.model.UserModel" alias="UserModel" />
+		<typeAlias type="com.spirit.porker.model.AdminModel" alias="AdminModel" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="conf/mybatis/messageModel.xml" />
+		<mapper resource="conf/mybatis/userModel.xml" />
+		<mapper resource="conf/mybatis/adminModel.xml" />
+		
+	</mappers>
+</configuration>
