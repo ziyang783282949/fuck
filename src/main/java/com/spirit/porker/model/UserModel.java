@@ -4,18 +4,25 @@ import java.sql.Timestamp;
 
 public class UserModel {
 	private int id;
-	
+
 	private String username;
 	private String password;
-	private String sex;
+	private int sex;
 	private String urlUserIcon;
 	private int credits;
 	private int changeCredits;
 	private int contributionCredits;
 	private String cookie;
-	
-	
-	
+	private String qrCode;
+
+	public String getQrCode() {
+		return qrCode;
+	}
+
+	public void setQrCode(String qrCode) {
+		this.qrCode = qrCode;
+	}
+
 	public String getCookie() {
 		return cookie;
 	}
@@ -72,11 +79,11 @@ public class UserModel {
 		this.password = password;
 	}
 
-	public String getSex() {
+	public int getSex() {
 		return sex;
 	}
 
-	public void setSex(String sex) {
+	public void setSex(int sex) {
 		this.sex = sex;
 	}
 

@@ -8,12 +8,13 @@
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="username" jdbcType="VARCHAR" property="username" />
 		<result column="password" jdbcType="VARCHAR" property="password" />
-		<result column="sex" jdbcType="DECIMAL" property="sex" />
+		<result column="sex" jdbcType="INTEGER" property="sex" />
 		<result column="url_user_icon" jdbcType="VARCHAR" property="urlUserIcon" />
 		<result column="credits" jdbcType="INTEGER" property="credits" />
 		<result column="change_credits" jdbcType="INTEGER" property="changeCredits" />
 		<result column="contribution_credits" jdbcType="INTEGER" property="contributionCredits" />
 		<result column="cookie" jdbcType="VARCHAR" property="cookie" />
+		<result column="qrcode" jdbcType="VARCHAR" property="qrCode" />
 		
 	</resultMap>
 
@@ -65,6 +66,12 @@
 			</if>
 			<if test="urlUserIcon != null">
 				url_user_icon=#{urlUserIcon},
+			</if>
+			<if test="qrCode != null">
+				qrcode=#{qrCode},
+			</if>
+			<if test="credits != null">
+				credits=#{credits},
 			</if>
 		</set>
 		</trim>
